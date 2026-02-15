@@ -27,8 +27,19 @@ function App() {
         Scroll to Preview &#8681;
       </a>
       <main>
-        <Form />
-        <Preview />
+        <Form
+          personalInfo={personalInfo}
+          setPersonalInfo={setPersonalInfo}
+          education={education}
+          setEducation={setEducation}
+          experience={experience}
+          setExperience={setExperience}
+        />
+        <Preview
+          personalInfo={personalInfo}
+          education={education}
+          experience={experience}
+        />
       </main>
       <footer>
         <a
