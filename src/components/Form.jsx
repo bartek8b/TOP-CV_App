@@ -1,4 +1,4 @@
-import './form.css';
+import './Form.css';
 
 export function Form() {
   const handleSubmit = (e) => {

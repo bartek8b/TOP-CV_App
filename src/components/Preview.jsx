@@ -1,4 +1,4 @@
-import './preview.css';
+import './Preview.css';
 
 export function Preview({ personalInfo, education, experience, interests }) {
   return (
