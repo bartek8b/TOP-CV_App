@@ -1,0 +1,10 @@
+form {
+  border-right: 2px dashed var(--lighter-color);
+}
+
+@media (max-width: 768px) {
+  form {
+    border-right: none;
+    border-bottom: 2px dashed var(--lighter-color);
+  }
+}

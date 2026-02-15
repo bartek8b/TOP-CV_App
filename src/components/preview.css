@@ -1,0 +1,13 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+strong {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 2px solid var(--main-color);
+  padding-left: 2rem;
+  padding-bottom: 0.2rem;
+}

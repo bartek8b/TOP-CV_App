@@ -20,11 +20,15 @@ function App() {
     { id: crypto.randomUUID(), years: '', company: '', position: '' },
   ]);
 
+  const [interests, setInterests] = useState(() => [
+    { id: crypto.randomUUID(), interest: '' },
+  ]);
+
   return (
     <>
       <header>CV Builder</header>
       <a href="#preview" style={{ textAlign: 'center' }}>
-        Scroll to Preview &#8681;
+        &#8681; Scroll to Preview &#8681;
       </a>
       <main>
         <Form
@@ -34,6 +38,8 @@ function App() {
           setEducation={setEducation}
           experience={experience}
           setExperience={setExperience}
+          interests={interests}
+          setInterests={setInterests}
         />
         <Preview
           personalInfo={personalInfo}
