@@ -1,5 +1,7 @@
 export function Form() {
-  return <form action="">
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
-  </form>;
+  return <form onSubmit={handleSubmit}></form>;
 }
