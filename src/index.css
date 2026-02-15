@@ -4,6 +4,7 @@
   --light-color: hsl(0, 0%, 85%);
   --lighter-color: hsl(0, 0%, 95%);
 }
+
 #root {
   min-height: 100vh;
   display: flex;
@@ -13,30 +14,36 @@
     'Roboto Mono', system-ui, 'Segoe UI', Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji';
 }
+
 a {
   text-decoration: none;
   cursor: pointer;
   color: inherit;
 }
+
 a:visited {
   color: inherit;
 }
+
 a[href='#preview'] {
   display: none;
   padding-block: 0.5rem;
   color: var(--main-color);
   background-color: var(--lighter-color);
 }
+
 main {
   background-color: var(--light-color);
   display: flex;
   flex: 1;
 }
+
 main > * {
   flex: 1;
   min-width: 0;
   padding: 2rem;
 }
+
 header,
 footer {
   background-color: var(--main-color);
@@ -44,9 +51,11 @@ footer {
   text-align: center;
   padding-block: 1rem;
 }
+
 header {
   font-size: 2rem;
 }
+
 footer {
   font-size: 0.8rem;
 }
@@ -55,9 +64,11 @@ footer {
   main {
     flex-direction: column;
   }
+
   main > * {
     flex: 0 0 auto;
   }
+  
   a[href='#preview'] {
     display: inline;
   }
