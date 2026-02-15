@@ -8,7 +8,9 @@
   display: flex;
   flex-direction: column;
   color: hsl(0, 0%, 15%);
-  font-family: 'Roboto Mono';
+  font-family:
+    'Roboto Mono', system-ui, 'Segoe UI', Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji';
 }
 a {
   text-decoration: none;
