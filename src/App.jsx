@@ -1,7 +1,25 @@
 import { Form } from './components/Form';
 import { Preview } from './components/Preview';
 
+import { useState } from 'react';
+
 function App() {
+  const [personalInfo, setPersonalInfo] = useState(() => ({
+    name: '',
+    yob: '',
+    homeplace: '',
+    email: '',
+    phone: '',
+  }));
+
+  const [education, setEducation] = useState(() => [
+    { id: crypto.randomUUID(), years: '', school: '', focus: '' },
+  ]);
+
+  const [experience, setExperience] = useState(() => [
+    { id: crypto.randomUUID(), years: '', company: '', position: '' },
+  ]);
+
   return (
     <>
       <header>CV Builder</header>
