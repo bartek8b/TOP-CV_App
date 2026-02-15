@@ -1,4 +1,5 @@
 :root {
+  scroll-behavior: smooth;
   --main-color: hsl(240, 100%, 70%);
   --light-color: hsl(0, 0%, 85%);
   --lighter-color: hsl(0, 0%, 95%);
