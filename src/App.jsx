@@ -6,7 +6,7 @@ function App() {
     <>
       <header>CV Builder</header>
       <a href="#preview" style={{ textAlign: 'center' }}>
-        Scroll to Prewiev &#8681;
+        Scroll to Preview &#8681;
       </a>
       <main>
         <Form />

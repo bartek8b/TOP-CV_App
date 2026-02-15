@@ -53,8 +53,7 @@ footer {
   main {
     flex-direction: column;
   }
-  main > form,
-  main > section {
+  main > * {
     flex: 0 0 auto;
   }
   a[href='#preview'] {
