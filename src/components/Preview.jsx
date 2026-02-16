@@ -14,6 +14,10 @@ export function Preview({ personalInfo, education, experience, interests }) {
       <article>
         <strong>Experience</strong>
       </article>
+
+      <article>
+        <strong>Interests</strong>
+      </article>
     </section>
   );
 }
