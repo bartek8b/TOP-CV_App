@@ -6,7 +6,7 @@ section {
 }
 
 section > * {
-  width: max(450px, 75%);
+  min-width: max(350px, 75%);
 }
 
 strong {

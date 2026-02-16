@@ -42,7 +42,7 @@ input:focus {
   background-color: var(--lighter-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   form {
     border-right: none;
     border-bottom: 2px dashed var(--lighter-color);
