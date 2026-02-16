@@ -24,11 +24,11 @@ function App() {
     phone: '',
   }));
 
-  const [education, setEducation] = useState([]);
+  const [education, setEducation] = useState(() => [createEducationItem()]);
 
-  const [experience, setExperience] = useState([]);
+  const [experience, setExperience] = useState(() => [createExperienceItem()]);
 
-  const [interests, setInterests] = useState([]);
+  const [interests, setInterests] = useState(() => [createInterestItem()]);
 
   // ----- Education handlers -----
   const addEducation = () => {
@@ -42,7 +42,9 @@ function App() {
   };
 
   const removeEducation = (id) => {
-    setEducation((prev) => prev.filter((item) => item.id !== id));
+    setEducation((prev) =>
+      prev.length <= 1 ? prev : prev.filter((i) => i.id !== id),
+    );
   };
 
   // ----- Experience handlers -----
@@ -57,7 +59,9 @@ function App() {
   };
 
   const removeExperience = (id) => {
-    setExperience((prev) => prev.filter((item) => item.id !== id));
+    setExperience((prev) =>
+      prev.length <= 1 ? prev : prev.filter((i) => i.id !== id),
+    );
   };
 
   // ----- Interests handlers -----
@@ -72,7 +76,9 @@ function App() {
   };
 
   const removeInterest = (id) => {
-    setInterests((prev) => prev.filter((item) => item.id !== id));
+    setInterests((prev) =>
+      prev.length <= 1 ? prev : prev.filter((i) => i.id !== id),
+    );
   };
 
   return (
