@@ -1,7 +1,12 @@
 section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
+}
+
+section > * {
+  width: max(450px, 75%);
 }
 
 strong {

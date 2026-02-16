@@ -1,5 +1,45 @@
 form {
   border-right: 2px dashed var(--lighter-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--main-color);
+  min-width: max(300px, 50%);
+}
+
+legend {
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+  border-radius: 0.25rem;
+  background-color: var(--main-color);
+  color: var(--lighter-color);
+  padding: 0.25rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+input {
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  background-color: var(--lighter-color);
+  padding: 0.25rem;
+}
+
+input:focus {
+  outline: 2px solid var(--main-color);
+  background-color: var(--lighter-color);
 }
 
 @media (max-width: 768px) {

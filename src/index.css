@@ -4,6 +4,8 @@ html {
 
 :root {
   scroll-behavior: smooth;
+
+  --font: hsl(0, 0%, 15%);
   --main-color: hsl(240, 100%, 70%);
   --light-color: hsl(0, 0%, 85%);
   --lighter-color: hsl(0, 0%, 95%);
@@ -13,7 +15,7 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: hsl(0, 0%, 15%);
+  color: var(--font);
   font-family:
     'Roboto Mono', system-ui, 'Segoe UI', Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji';
@@ -50,7 +52,7 @@ main {
 main > * {
   flex: 1;
   min-width: 0;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 header,
@@ -77,7 +79,7 @@ footer {
   main > * {
     flex: 0 0 auto;
   }
-  
+
   a[href='#preview'] {
     display: inline;
   }
