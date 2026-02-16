@@ -3,6 +3,18 @@ import { Preview } from './components/Preview';
 
 import { useState } from 'react';
 
+function createEducationItem() {
+  return { id: crypto.randomUUID(), years: '', school: '', focus: '' };
+}
+
+function createExperienceItem() {
+  return { id: crypto.randomUUID(), years: '', company: '', position: '' };
+}
+
+function createInterestItem() {
+  return { id: crypto.randomUUID(), interest: '' };
+}
+
 function App() {
   const [personalInfo, setPersonalInfo] = useState(() => ({
     name: '',
@@ -12,17 +24,56 @@ function App() {
     phone: '',
   }));
 
-  const [education, setEducation] = useState(() => [
-    { id: crypto.randomUUID(), years: '', school: '', focus: '' },
-  ]);
+  const [education, setEducation] = useState([]);
 
-  const [experience, setExperience] = useState(() => [
-    { id: crypto.randomUUID(), years: '', company: '', position: '' },
-  ]);
+  const [experience, setExperience] = useState([]);
 
-  const [interests, setInterests] = useState(() => [
-    { id: crypto.randomUUID(), interest: '' },
-  ]);
+  const [interests, setInterests] = useState([]);
+
+  // ----- Education handlers -----
+  const addEducation = () => {
+    setEducation((prev) => [...prev, createEducationItem()]);
+  };
+
+  const updateEducation = (id, patch) => {
+    setEducation((prev) =>
+      prev.map((item) => (item.id === id ? { ...item, ...patch } : item)),
+    );
+  };
+
+  const removeEducation = (id) => {
+    setEducation((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  // ----- Experience handlers -----
+  const addExperience = () => {
+    setExperience((prev) => [...prev, createExperienceItem()]);
+  };
+
+  const updateExperience = (id, patch) => {
+    setExperience((prev) =>
+      prev.map((item) => (item.id === id ? { ...item, ...patch } : item)),
+    );
+  };
+
+  const removeExperience = (id) => {
+    setExperience((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  // ----- Interests handlers -----
+  const addInterest = () => {
+    setInterests((prev) => [...prev, createInterestItem()]);
+  };
+
+  const updateInterest = (id, patch) => {
+    setInterests((prev) =>
+      prev.map((item) => (item.id === id ? { ...item, ...patch } : item)),
+    );
+  };
+
+  const removeInterest = (id) => {
+    setInterests((prev) => prev.filter((item) => item.id !== id));
+  };
 
   return (
     <>
@@ -35,16 +86,23 @@ function App() {
           personalInfo={personalInfo}
           setPersonalInfo={setPersonalInfo}
           education={education}
-          setEducation={setEducation}
+          addEducation={addEducation}
+          updateEducation={updateEducation}
+          removeEducation={removeEducation}
           experience={experience}
-          setExperience={setExperience}
+          addExperience={addExperience}
+          updateExperience={updateExperience}
+          removeExperience={removeExperience}
           interests={interests}
-          setInterests={setInterests}
+          addInterest={addInterest}
+          updateInterest={updateInterest}
+          removeInterest={removeInterest}
         />
         <Preview
           personalInfo={personalInfo}
           education={education}
           experience={experience}
+          interests={interests}
         />
       </main>
       <footer>

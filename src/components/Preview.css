@@ -11,3 +11,16 @@ strong {
   padding-left: 2rem;
   padding-bottom: 0.2rem;
 }
+
+ul {
+  margin-top: 1rem;
+}
+
+ul > li {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+ul > li::marker {
+  color: var(--main-color);
+}

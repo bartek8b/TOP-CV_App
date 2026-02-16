@@ -1,3 +1,7 @@
+html {
+  background-color: var(--light-color);
+}
+
 :root {
   scroll-behavior: smooth;
   --main-color: hsl(240, 100%, 70%);
@@ -13,6 +17,11 @@
   font-family:
     'Roboto Mono', system-ui, 'Segoe UI', Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 a {
