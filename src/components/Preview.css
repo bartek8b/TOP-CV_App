@@ -39,7 +39,12 @@ ul > li::marker {
 }
 
 button.pdf-btn {
-  min-width: 150px;
+  min-width: fit-content;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 @media (max-width: 1000px) {
