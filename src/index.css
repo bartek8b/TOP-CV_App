@@ -58,7 +58,7 @@ button {
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
-  margin-block: 1rem;
+  margin-top: 1rem;
   width: 150px;
   align-self: center;
 }
@@ -129,5 +129,40 @@ footer {
 
   a[href='#preview'] {
     display: inline;
+  }
+}
+
+@media print {
+  :root,
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  #root * {
+    visibility: hidden;
+  }
+
+  #preview,
+  #preview * {
+    visibility: visible;
+  }
+
+  #preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+  }
+
+  header,
+  footer,
+  form,
+  button,
+  a[href='#preview'] {
+    display: none !important;
   }
 }

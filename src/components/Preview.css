@@ -1,3 +1,11 @@
+#preview {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  max-height: 100vh;
+  overflow: auto;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -28,4 +36,15 @@ ul > li {
 
 ul > li::marker {
   color: var(--main-color);
+}
+
+button.pdf-btn {
+  min-width: 150px;
+}
+
+@media (max-width: 1000px) {
+  #preview {
+    position: static;
+    align-self: stretch;
+  }
 }

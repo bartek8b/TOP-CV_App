@@ -82,6 +82,9 @@ export function Preview({ personalInfo, education, experience, interests }) {
           </ul>
         </article>
       )}
+      <button type="button" className="pdf-btn" onClick={() => window.print()}>
+        Generate PDF
+      </button>
     </section>
   );
 }
