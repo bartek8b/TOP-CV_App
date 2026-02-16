@@ -24,16 +24,14 @@ function App() {
     phone: '',
   }));
 
-  const [education, setEducation] = useState(() => [createEducationItem()]);
-
-  const [experience, setExperience] = useState(() => [createExperienceItem()]);
-
-  const [interests, setInterests] = useState(() => [createInterestItem()]);
+  // opcja B: pusto na start
+  const [education, setEducation] = useState([]);
+  const [experience, setExperience] = useState([]);
+  const [interests, setInterests] = useState([]);
 
   // ----- Education handlers -----
-  const addEducation = () => {
+  const addEducation = () =>
     setEducation((prev) => [...prev, createEducationItem()]);
-  };
 
   const updateEducation = (id, patch) => {
     setEducation((prev) =>
@@ -41,16 +39,14 @@ function App() {
     );
   };
 
+  // opcja B: usuwa nawet ostatni
   const removeEducation = (id) => {
-    setEducation((prev) =>
-      prev.length <= 1 ? prev : prev.filter((i) => i.id !== id),
-    );
+    setEducation((prev) => prev.filter((i) => i.id !== id));
   };
 
   // ----- Experience handlers -----
-  const addExperience = () => {
+  const addExperience = () =>
     setExperience((prev) => [...prev, createExperienceItem()]);
-  };
 
   const updateExperience = (id, patch) => {
     setExperience((prev) =>
@@ -58,16 +54,14 @@ function App() {
     );
   };
 
+  // opcja B
   const removeExperience = (id) => {
-    setExperience((prev) =>
-      prev.length <= 1 ? prev : prev.filter((i) => i.id !== id),
-    );
+    setExperience((prev) => prev.filter((i) => i.id !== id));
   };
 
   // ----- Interests handlers -----
-  const addInterest = () => {
+  const addInterest = () =>
     setInterests((prev) => [...prev, createInterestItem()]);
-  };
 
   const updateInterest = (id, patch) => {
     setInterests((prev) =>
@@ -75,10 +69,9 @@ function App() {
     );
   };
 
+  // opcja B
   const removeInterest = (id) => {
-    setInterests((prev) =>
-      prev.length <= 1 ? prev : prev.filter((i) => i.id !== id),
-    );
+    setInterests((prev) => prev.filter((i) => i.id !== id));
   };
 
   return (
