@@ -6,24 +6,12 @@
   overflow: auto;
 }
 
-#preview,
-#preview * {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
 section {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 2rem;
-  min-width: 0;
-}
-
-section > *:not(button) {
-  width: min(100%, 70ch); /* 70ch ~ szerokość tekstu jak w dokumencie */
-  max-width: 100%;
-  min-width: 0;
+  word-break: break-word;
 }
 
 strong {
