@@ -24,7 +24,6 @@ function App() {
     phone: '',
   }));
 
-  // opcja B: pusto na start
   const [education, setEducation] = useState([]);
   const [experience, setExperience] = useState([]);
   const [interests, setInterests] = useState([]);
@@ -39,7 +38,6 @@ function App() {
     );
   };
 
-  // opcja B: usuwa nawet ostatni
   const removeEducation = (id) => {
     setEducation((prev) => prev.filter((i) => i.id !== id));
   };
@@ -54,7 +52,6 @@ function App() {
     );
   };
 
-  // opcja B
   const removeExperience = (id) => {
     setExperience((prev) => prev.filter((i) => i.id !== id));
   };
@@ -69,7 +66,6 @@ function App() {
     );
   };
 
-  // opcja B
   const removeInterest = (id) => {
     setInterests((prev) => prev.filter((i) => i.id !== id));
   };
