@@ -4,7 +4,6 @@ export function Education({
   updateEducation,
   removeEducation,
 }) {
-  // pusto -> tylko przycisk
   if (education.length === 0) {
     return (
       <fieldset>
